@@ -1,11 +1,15 @@
 mlflow.db
 mlartifacts/
+mlruns/
+catboost_info/
 models/
 outputs/
 data/train_phase1.csv
 data/eval.csv
 data/train_phase2.csv
 sa-key.json
+*_accessKeys.csv
+*.pem
 .env
 .venv/
 __pycache__/

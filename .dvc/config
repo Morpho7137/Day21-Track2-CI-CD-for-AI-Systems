@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://pkkkkkkkk1-717292229247-us-east-1-an/dvc
