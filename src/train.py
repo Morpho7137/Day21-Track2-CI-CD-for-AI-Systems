@@ -29,6 +29,11 @@ def train(
     """
 
     df_train = pd.read_csv(data_path)
+    extra_train_path = "data/train_phase2.csv"
+    use_extra_train_data = os.getenv("USE_EXTRA_TRAIN_DATA") == "1"
+    if use_extra_train_data and os.path.exists(extra_train_path):
+        df_extra = pd.read_csv(extra_train_path)
+        df_train = pd.concat([df_train, df_extra], ignore_index=True)
     df_eval = pd.read_csv(eval_path)
 
     X_train = df_train.drop(columns=["target"])
